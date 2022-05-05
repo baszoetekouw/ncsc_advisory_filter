@@ -1,0 +1,13 @@
+[Unit]
+Description=Update NCSC feed
+
+[Service]
+DynamicUser=true
+SupplementaryGroups=ncsc_writers
+ReadWritePaths=/srv/ncsc/www
+WorkingDirectory=/srv/ncsc/www
+
+Type=oneshot
+ExecStart=/srv/ncsc/do_ncsc.sh
+
+

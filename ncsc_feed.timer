@@ -1,0 +1,11 @@
+[Unit]
+Description=NCSC Feed updater
+After=syslog.target
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+
+[Install]
+WantedBy=multi-user.target
+
